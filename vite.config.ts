@@ -1,8 +1,11 @@
 import { tanstackStart } from '@tanstack/react-start/plugin/vite';
 import { defineConfig } from 'vite';
 import viteReact from '@vitejs/plugin-react';
-import { nitro } from 'nitro/vite';  // ← this line is missing
+import { nitro } from 'nitro/vite';
 
 export default defineConfig({
   plugins: [tanstackStart(), nitro(), viteReact()],
+  css: {
+    transformer: 'postcss',   // ← disable LightningCSS, use PostCSS instead
+  },
 });
