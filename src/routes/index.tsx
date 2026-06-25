@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
-  ScarcityBanner, Navbar, HeroSection, ProblemSection, HiddenCostSection,
-  StatsSection, HowItWorksSection, LiveDemoSection, BenefitsSection,
-  PilotSection, MetricsSection, FounderSection, TestimonialsSection,
+  ScarcityBanner, Navbar, HeroSection, RecoveredJobValueSection, ProblemSection,
+  HiddenCostSection, StatsSection, WhyPilotSection, HowItWorksSection, LiveDemoSection,
+  BenefitsSection, PilotSection, MetricsSection, FounderSection,
   FAQSection, FinalCTA, Footer,
 } from "@/components/landing";
 
@@ -26,16 +26,17 @@ function Index() {
         <Navbar />
         <main>
           <HeroSection />
+          <RecoveredJobValueSection />
           <ProblemSection />
           <HiddenCostSection />
           <StatsSection />
+          <WhyPilotSection />
           <HowItWorksSection />
           <LiveDemoSection />
           <BenefitsSection />
-          <PilotSection />
           <MetricsSection />
           <FounderSection />
-          <TestimonialsSection />
+          <PilotSection />
           <FAQSection />
           <FinalCTA />
         </main>
