@@ -251,31 +251,158 @@ function Tile({ label, value, sub, chart, chartColor }: { label: string; value: 
 
 /* ---------- Hero ---------- */
 
-<motion.h1
-  initial={{ opacity: 0, y: 24 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, delay: 0.15 }}
-  className="font-black text-[#0F172A] tracking-[-0.03em] leading-[1.08] mb-6"
-  style={{ fontSize: "clamp(36px, 5.6vw, 58px)" }}
->
-  How Many Roofing Jobs
-  <br />
-  Are You Losing
-  <br />
-  Every Month?
-</motion.h1>
+export function HeroSection() {
+return (
+<section
+className="relative pt-24 pb-20 px-6"
+style={{
+background:
+"radial-gradient(ellipse 80% 60% at 50% -10%, rgba(37,99,235,0.12) 0%, transparent 70%), linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 40%, #F8FAFC 100%)",
+}}
+> <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-<motion.p
-  initial={{ opacity: 0, y: 24 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, delay: 0.3 }}
-  className="text-[18px] text-[#475569] leading-[1.65] mb-8 max-w-[520px]"
->
-  Homeowners often contact multiple roofing companies before choosing a contractor.
-  In many cases, the company that responds first gets the inspection.
-  We're running a pilot program to measure whether faster follow-up helps roofing
-  companies recover more opportunities and book more inspections.
-</motion.p>
+```
+    {/* Left Content */}
+    <div>
+
+      {/* Pilot Badge */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[13px] font-semibold text-[#2563EB] mb-7"
+        style={{
+          background: "rgba(37,99,235,0.08)",
+          border: "1px solid rgba(37,99,235,0.2)",
+        }}
+      >
+        <span className="w-2 h-2 rounded-full bg-[#10B981] pulse-dot" />
+        Helping Roofing Companies Measure Lost Revenue Opportunities
+      </motion.div>
+
+      {/* Headline */}
+      <motion.h1
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.15 }}
+        className="font-black text-[#0F172A] tracking-[-0.04em] leading-[1.02] mb-6"
+        style={{ fontSize: "clamp(42px, 6vw, 72px)" }}
+      >
+        How Many Roofing Jobs
+        <br />
+        Are You Losing
+        <br />
+        <span
+          className="bg-clip-text text-transparent"
+          style={{
+            backgroundImage:
+              "linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%)",
+          }}
+        >
+          Every Month?
+        </span>
+      </motion.h1>
+
+      {/* Subheadline */}
+      <motion.p
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="text-[18px] text-[#475569] leading-[1.75] mb-8 max-w-[560px]"
+      >
+        Homeowners often contact multiple roofing companies before choosing
+        a contractor. In many cases, the company that responds first gets
+        the inspection. We're running a pilot program to determine whether
+        faster follow-up can help roofing companies recover missed
+        opportunities and book more inspections.
+      </motion.p>
+
+      {/* CTA Buttons */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.45 }}
+        className="flex flex-wrap gap-3"
+      >
+        <Button href="#pilot" size="lg">
+          Book Free Pilot Call
+          <ArrowRight size={18} />
+        </Button>
+
+        <Button href="#demo" variant="secondary" size="lg">
+          <PlayCircle size={18} />
+          Watch 90-Second Demo
+        </Button>
+      </motion.div>
+
+      {/* Revenue Card */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.55 }}
+        className="mt-8"
+      >
+        <div
+          className="inline-flex items-center gap-3 px-5 py-4 rounded-xl"
+          style={{
+            background: "rgba(16,185,129,0.08)",
+            border: "1px solid rgba(16,185,129,0.2)",
+          }}
+        >
+          <span className="text-[#10B981] font-semibold">
+            Average Roof Replacement:
+          </span>
+
+          <span className="font-bold text-[#0F172A] text-lg">
+            $10,000 – $20,000+
+          </span>
+        </div>
+
+        <p className="text-sm text-[#64748B] mt-3 max-w-[520px]">
+          Recovering even one additional roofing project can often generate
+          significantly more value than the cost of improving response and
+          follow-up.
+        </p>
+      </motion.div>
+
+      {/* Trust Indicators */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.7 }}
+        className="flex flex-wrap gap-x-8 gap-y-3 mt-10"
+      >
+        {[
+          "No setup fee",
+          "No long-term commitment",
+          "Results measured transparently",
+        ].map((item) => (
+          <div
+            key={item}
+            className="flex items-center gap-2 text-[14px] text-[#64748B]"
+          >
+            <Check size={16} className="text-[#10B981]" />
+            {item}
+          </div>
+        ))}
+      </motion.div>
+    </div>
+
+    {/* Dashboard Mockup */}
+    <motion.div
+      initial={{ opacity: 0, y: 32 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, delay: 0.3 }}
+    >
+      <DashboardMockup />
+    </motion.div>
+  </div>
+</section>
+```
+
+);
+}
+
 
 /* ---------- Recovered Job Value ---------- */
 
