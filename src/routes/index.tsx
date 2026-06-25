@@ -1,29 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
+import {
+  ScarcityBanner, Navbar, HeroSection, ProblemSection, HiddenCostSection,
+  StatsSection, HowItWorksSection, LiveDemoSection, BenefitsSection,
+  PilotSection, MetricsSection, FounderSection, TestimonialsSection,
+  FAQSection, FinalCTA, Footer,
+} from "@/components/landing";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Roof Revenue Recovery — Stop Losing Roofing Leads to Faster Competitors" },
+      { name: "description", content: "Done-for-you revenue recovery service for roofing companies. Respond to estimate requests in minutes, book more inspections, win more jobs." },
+      { property: "og:title", content: "Roof Revenue Recovery — Stop Losing Roofing Leads to Faster Competitors" },
+      { property: "og:description", content: "Done-for-you revenue recovery service for roofing companies. Respond to estimate requests in minutes, book more inspections, win more jobs." },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-[#F8FAFC]">
+      <ScarcityBanner />
+      <div className="pt-10">
+        <Navbar />
+        <main>
+          <HeroSection />
+          <ProblemSection />
+          <HiddenCostSection />
+          <StatsSection />
+          <HowItWorksSection />
+          <LiveDemoSection />
+          <BenefitsSection />
+          <PilotSection />
+          <MetricsSection />
+          <FounderSection />
+          <TestimonialsSection />
+          <FAQSection />
+          <FinalCTA />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
