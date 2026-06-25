@@ -6,6 +6,9 @@ import { nitro } from 'nitro/vite';
 export default defineConfig({
   plugins: [tanstackStart(), nitro(), viteReact()],
   css: {
-    transformer: 'postcss',   // ← disable LightningCSS, use PostCSS instead
+    transformer: 'postcss',
+  },
+  build: {
+    cssMinify: 'esbuild',   // ← force esbuild instead of lightningcss
   },
 });
