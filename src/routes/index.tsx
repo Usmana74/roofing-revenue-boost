@@ -26,16 +26,17 @@ function Index() {
         <Navbar />
         <main>
           <HeroSection />
+          <RecoveredJobValueSection />
           <ProblemSection />
           <HiddenCostSection />
           <StatsSection />
+          <WhyPilotSection />
           <HowItWorksSection />
           <LiveDemoSection />
           <BenefitsSection />
-          <PilotSection />
           <MetricsSection />
           <FounderSection />
-          <TestimonialsSection />
+          <PilotSection />
           <FAQSection />
           <FinalCTA />
         </main>
